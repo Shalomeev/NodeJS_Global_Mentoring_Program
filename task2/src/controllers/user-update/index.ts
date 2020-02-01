@@ -1,3 +1,4 @@
+import * as HttpStatus from 'http-status-codes';
 import BdAPI from '../../bd';
 
 const userUpdate = (req, res, next) => {
@@ -7,7 +8,7 @@ const userUpdate = (req, res, next) => {
     if (user) {
         res.send(user);
     } else {
-        res.status(404).send({ error: 'User not found!' });
+        res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({ error: 'User not found!' });
     }
     next();
 };

@@ -1,3 +1,4 @@
+import * as HttpStatus from 'http-status-codes';
 import BdAPI from '../../bd';
 
 const userCreate = (req, res, next) => {
@@ -12,7 +13,7 @@ const userCreate = (req, res, next) => {
     if (user) {
         res.send(user);
     } else {
-        res.status(500).send({ error: 'Something failed!' });
+        res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({ error: 'Something failed!' });
     }
     next();
 };

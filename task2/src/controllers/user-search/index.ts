@@ -1,4 +1,7 @@
+import * as HttpStatus from 'http-status-codes';
 import BdAPI from '../../bd';
+
+const USER_SEARCH_LIMIT = 10;
 
 const finder = login => user => {
     if (user.isDeleted) return;
@@ -6,7 +9,7 @@ const finder = login => user => {
 };
 
 const userSearch = (req, res, next) => {
-    const { login, limit = 10 } = req.query;
+    const { login, limit = USER_SEARCH_LIMIT } = req.query;
 
     const find = finder(login);
     const users = BdAPI.findUser(find).slice(0, limit);
@@ -17,7 +20,7 @@ const userSearch = (req, res, next) => {
             total: users.length
         });
     } else {
-        res.status(500).send({ error: 'Something failed!' });
+        res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({ error: 'Something failed!' });
     }
     next();
 };
