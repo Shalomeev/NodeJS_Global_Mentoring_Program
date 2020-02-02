@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { userDelete } from '../../controllers/index';
+import { userDelete } from '../../controllers';
 import validation from './user-delete.validation';
 
 

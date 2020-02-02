@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { userUpdate } from '../../controllers/index';
+import { userUpdate } from '../../controllers';
 import validation from './user-update.validation';
 
 
