@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { userCreate } from '../../controllers/index';
+import { userCreate } from '../../../controllers';
 import validation from './user-create.validation';
 
 const route = express.Router();
@@ -7,4 +7,3 @@ const route = express.Router();
 route.post('/', validation, userCreate);
 
 export default route;
-

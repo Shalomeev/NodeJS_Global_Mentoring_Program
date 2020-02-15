@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { userGet } from '../../controllers/index';
+import { userGet } from '../../../controllers';
 import validation from './user-get.validation';
 
 
