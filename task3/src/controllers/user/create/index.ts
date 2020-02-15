@@ -1,5 +1,5 @@
-import { User } from '../../models';
-import { processResults } from '../../utils';
+import { User } from '../../../models';
+import { processResults } from '../../../utils';
 
 const userCreate = (req) => {
     const { login, password, age } = req.body;

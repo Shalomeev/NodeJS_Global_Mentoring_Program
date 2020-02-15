@@ -1,6 +1,6 @@
-import { User } from '../../models';
-import { processResults } from '../../utils';
-import { SUCCESS, FAIL } from '../../core/constants';
+import { User } from '../../../models';
+import { processResults } from '../../../utils';
+import { SUCCESS, FAIL } from '../../../core/constants';
 
 const userDelete = async (req) => {
     const { id } = req.params;

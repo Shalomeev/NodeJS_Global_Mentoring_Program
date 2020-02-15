@@ -11,13 +11,13 @@ interface Config {
 }
 
 const config: Config = {
-    username: 'wugujesf',
-    password: 'gikCwqld-GZbdY3f2GpjOuZSy3uZejuw',
-    database: 'wugujesf',
-    dialect: 'postgres',
-    protocol: 'postgres',
-    port: 5432,
-    host: 'rajje.db.elephantsql.com'
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    dialect: process.env.DB_DIALECT as Dialect,
+    protocol: process.env.DB_PROTOCOL,
+    port: Number(process.env.DB_PORT),
+    host: process.env.DB_HOST,
 };
 
 export default config;

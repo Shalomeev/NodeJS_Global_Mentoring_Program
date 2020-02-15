@@ -1,6 +1,6 @@
 import { Op } from 'sequelize';
-import { User } from '../../models';
-import { processResults } from '../../utils';
+import { User } from '../../../models';
+import { processResults } from '../../../utils';
 
 const USER_SEARCH_LIMIT = 10;
 

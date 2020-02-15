@@ -1,8 +1,10 @@
+require('dotenv').config();
+
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import * as HttpStatus from 'http-status-codes';
 
-import { userRouter } from './routes';
+import appRouter from './routes';
 import { joiErrorHandler, sequelizeErrorHandler, errorHandler } from './utils';
 
 const app = express();
@@ -11,7 +13,7 @@ const app = express();
 app.use(bodyParser());
 
 // routes
-app.use('/user', userRouter);
+app.use(appRouter);
 
 // error handler
 app.use(joiErrorHandler);

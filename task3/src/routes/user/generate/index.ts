@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { userGenerate } from '../../controllers';
+import { userGenerate } from '../../../controllers';
 import validation from './user-generate.validation';
 
 

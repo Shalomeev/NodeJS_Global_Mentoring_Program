@@ -1,5 +1,5 @@
-import { User } from '../../models';
-import { processResults, generateUsers } from '../../utils';
+import { User } from '../../../models';
+import { processResults, generateUsers } from '../../../utils';
 
 const DEFAULT_GENERATE_COUNT = 100;
 

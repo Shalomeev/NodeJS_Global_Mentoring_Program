@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { userSearch } from '../../controllers';
+import { userSearch } from '../../../controllers';
 import validation from './user-search.validation';
 
 

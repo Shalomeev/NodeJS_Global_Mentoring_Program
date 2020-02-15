@@ -1,5 +1,5 @@
 import * as express from 'express';
-import { userCreate } from '../../controllers';
+import { userCreate } from '../../../controllers';
 import validation from './user-create.validation';
 
 const route = express.Router();
