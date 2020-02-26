@@ -6,7 +6,7 @@ const groupCreate = (req) => {
 
   return Group.create({
     name,
-    permissions,
+    permissions
   });
 };
 

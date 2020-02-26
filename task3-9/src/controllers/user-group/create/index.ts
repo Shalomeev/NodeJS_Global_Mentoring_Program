@@ -5,7 +5,7 @@ const userGroupCreate = async (req) => {
   const { userId, groupId } = req.body;
   const [group, user] = await Promise.all([
     Group.findByPk(groupId),
-    User.findByPk(userId),
+    User.findByPk(userId)
   ]);
 
   return group.addUser(user);

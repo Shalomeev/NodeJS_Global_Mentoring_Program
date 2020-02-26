@@ -5,12 +5,12 @@ import UserGroup from './UserGroup';
 
 User.belongsToMany(Group, {
   through: UserGroup,
-  onDelete: 'cascade',
+  onDelete: 'cascade'
 });
 
 Group.belongsToMany(User, {
   through: UserGroup,
-  onDelete: 'cascade',
+  onDelete: 'cascade'
 });
 
 sequelize.sync();
@@ -18,5 +18,5 @@ sequelize.sync();
 export {
   User,
   Group,
-  UserGroup,
+  UserGroup
 };

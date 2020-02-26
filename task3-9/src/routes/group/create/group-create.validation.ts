@@ -4,6 +4,6 @@ import { GroupNameValidator, PermissionsValidator } from '../../../core/validato
 export default validate({
   body: {
     name: GroupNameValidator.required(),
-    permissions: PermissionsValidator.required(),
+    permissions: PermissionsValidator.required()
   }
 });

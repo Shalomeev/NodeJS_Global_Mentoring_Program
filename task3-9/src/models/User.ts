@@ -10,27 +10,27 @@ class User extends Model {
 }
 
 User.init({
-    login: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique: true
-    },
-    password: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    age: {
-        type: Sequelize.INTEGER,
-        allowNull: true
-    },
-    isDeleted: {
-        type: Sequelize.BOOLEAN,
-        allowNull: false
-    }
+  login: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    unique: true
+  },
+  password: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
+  age: {
+    type: Sequelize.INTEGER,
+    allowNull: true
+  },
+  isDeleted: {
+    type: Sequelize.BOOLEAN,
+    allowNull: false
+  }
 },
 {
-    sequelize,
-    modelName: 'User'
+  sequelize,
+  modelName: 'User'
 });
 
 export default User;

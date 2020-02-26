@@ -8,19 +8,19 @@ class Group extends Model {
 }
 
 Group.init({
-    name: {
-      type: Sequelize.STRING,
-      allowNull: false,
-      unique: true
-    },
-    permissions: {
-      type: Sequelize.ARRAY(Sequelize.STRING),
-      allowNull: false,
-    },
+  name: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    unique: true
   },
-  {
-     sequelize,
-     modelName: 'Group'
-  });
+  permissions: {
+    type: Sequelize.ARRAY(Sequelize.STRING),
+    allowNull: false
+  }
+},
+{
+  sequelize,
+  modelName: 'Group'
+});
 
 export default Group;

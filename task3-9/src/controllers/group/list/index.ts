@@ -9,12 +9,12 @@ const groupList = async (req) => {
 
   const groups = await Group.findAll({
     limit,
-    offset: limit * (page - 1),
+    offset: limit * (page - 1)
   });
 
   return {
     total: groups.length,
-    groups,
+    groups
   };
 };
 

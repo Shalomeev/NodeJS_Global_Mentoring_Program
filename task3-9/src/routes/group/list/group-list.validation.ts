@@ -4,6 +4,6 @@ import * as validate from 'express-joi-validator';
 export default validate({
   query: {
     limit: Joi.number(),
-    page: Joi.number(),
+    page: Joi.number()
   }
 });

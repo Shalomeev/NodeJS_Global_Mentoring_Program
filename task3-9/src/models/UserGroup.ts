@@ -1,11 +1,11 @@
 import sequelize from '../db';
-const { Model, Sequelize } = require('sequelize');
+const { Model } = require('sequelize');
 
 class UserGroup extends Model {}
 
 UserGroup.init({}, {
   sequelize,
-  modelName: 'UserGroup',
+  modelName: 'UserGroup'
 });
 
 export default UserGroup;

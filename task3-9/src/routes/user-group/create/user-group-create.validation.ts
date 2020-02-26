@@ -4,6 +4,6 @@ import { IdValidator } from '../../../core/validators';
 export default validate({
   body: {
     userId: IdValidator.required(),
-    groupId: IdValidator.required(),
+    groupId: IdValidator.required()
   }
 });
