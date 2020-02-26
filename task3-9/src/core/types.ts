@@ -1,3 +1,5 @@
+import { PERMISSIONS } from './constants';
+
 export type Id = string;
 export type Login = string;
 export type Password = string;
@@ -13,3 +15,4 @@ export interface User {
   [key: string]: any,
 }
 
+export type Permission = keyof typeof PERMISSIONS;

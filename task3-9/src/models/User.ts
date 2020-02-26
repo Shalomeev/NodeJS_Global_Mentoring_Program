@@ -1,18 +1,12 @@
 import sequelize from '../db';
-const Sequelize = require('sequelize');
-const Model = Sequelize.Model;
+const { Sequelize, Model } = require('sequelize');
+import { hideProtectedFields } from './utils';
+import { PROTECTED_ATTRIBUTES } from './constants';
 
-const PROTECTED_ATTRIBUTES = ['isDeleted', 'createdAt', 'updatedAt'];
+const PROTECTED_FIELDS = [...PROTECTED_ATTRIBUTES, 'isDeleted'];
 
 class User extends Model {
-    toJSON() {
-    // hide protected fields
-        const user = { ...this.get() };
-        for (const protectedField of PROTECTED_ATTRIBUTES) {
-            delete user[protectedField];
-        }
-        return user;
-    }
+    toJSON = hideProtectedFields(PROTECTED_FIELDS);
 }
 
 User.init({
