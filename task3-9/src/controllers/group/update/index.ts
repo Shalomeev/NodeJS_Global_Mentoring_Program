@@ -1,10 +1,10 @@
-import { User } from '../../../models';
+import { Group } from '../../../models';
 import { processResults } from '../../../utils';
 
-const userUpdate = async (req) => {
+const groupUpdate = async (req) => {
   const { id } = req.params;
 
-  const result = await User.update(
+  const result = await Group.update(
     req.body,
     {
       where: { id },
@@ -14,5 +14,4 @@ const userUpdate = async (req) => {
   return result[1][0];
 };
 
-export default processResults(userUpdate);
-
+export default processResults(groupUpdate);

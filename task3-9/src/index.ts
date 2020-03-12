@@ -22,10 +22,10 @@ app.use(errorHandler);
 
 // 404
 app.use((req, res, next) => {
-    res.status(HttpStatus.NOT_FOUND).send('route not found');
-    next();
+  res.status(HttpStatus.NOT_FOUND).send('route not found');
+  next();
 });
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log('Example app listening on port 3000!');
+  console.log('Example app listening on port 3000!');
 });
