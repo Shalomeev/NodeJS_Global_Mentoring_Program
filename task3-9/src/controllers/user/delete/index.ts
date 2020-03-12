@@ -1,5 +1,5 @@
 import { User } from '../../../models';
-import { processResults } from '../../../utils';
+import { processResults } from '../../../middlewares';
 import { SUCCESS, FAIL } from '../../../core/constants';
 
 const userDelete = async (req) => {

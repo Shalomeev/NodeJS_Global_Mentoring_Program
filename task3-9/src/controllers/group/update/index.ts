@@ -1,5 +1,5 @@
 import { Group } from '../../../models';
-import { processResults } from '../../../utils';
+import { processResults } from '../../../middlewares';
 
 const groupUpdate = async (req) => {
   const { id } = req.params;

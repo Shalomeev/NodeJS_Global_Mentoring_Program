@@ -1,5 +1,5 @@
 import { Group } from '../../../models';
-import { processResults } from '../../../utils';
+import { processResults } from '../../../middlewares';
 
 const groupCreate = (req) => {
   const { name, permissions } = req.body;

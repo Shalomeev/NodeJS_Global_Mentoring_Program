@@ -16,7 +16,9 @@ export const sequelizeErrorHandler = (err, req, res, next) => {
 
 export const errorHandler = (err, req, res, next) => {
   if (err) {
-    return res.status(HttpStatus.INTERNAL_SERVER_ERROR).send({ error: err });
+    const isDevelopment = process.env.mode === 'development';
+
+    return res.status(HttpStatus.INTERNAL_SERVER_ERROR).send(isDevelopment ? { error: err } : 'Oops, something went wrong!');
   }
   next();
 };

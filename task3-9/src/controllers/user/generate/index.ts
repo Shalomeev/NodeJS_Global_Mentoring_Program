@@ -1,5 +1,6 @@
 import { User } from '../../../models';
-import { processResults, generateUsers } from '../../../utils';
+import { generateUsers } from '../../../utils';
+import { processResults } from '../../../middlewares';
 
 const DEFAULT_GENERATE_COUNT = 100;
 

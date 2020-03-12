@@ -1,5 +1,5 @@
 import { User } from '../../../models';
-import { processResults } from '../../../utils';
+import { processResults } from '../../../middlewares';
 
 const userGet = async (req) => User.findByPk(req.params.id);
 

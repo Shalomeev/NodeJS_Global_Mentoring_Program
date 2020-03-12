@@ -1,6 +1,6 @@
 import { Group } from '../../../models';
-import { processResults } from '../../../utils';
+import { processResults } from '../../../middlewares';
 
-const groupGet = async (req) => Group.findByPk(req.params.id);
+const groupGet = (req) => Group.findByPk(req.params.id);
 
 export default processResults(groupGet);

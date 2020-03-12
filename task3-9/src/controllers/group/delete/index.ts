@@ -1,5 +1,5 @@
 import { Group } from '../../../models';
-import { processResults } from '../../../utils';
+import { processResults } from '../../../middlewares';
 import { SUCCESS, FAIL } from '../../../core/constants';
 
 const groupDelete = async (req) => {
