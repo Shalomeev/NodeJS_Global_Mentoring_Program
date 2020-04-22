@@ -1,5 +1,5 @@
 import { User, Group } from '../../../models';
-import { processResults } from '../../../utils';
+import { processResults } from '../../../middlewares';
 
 const userGroupCreate = async (req) => {
   const { userId, groupId } = req.body;

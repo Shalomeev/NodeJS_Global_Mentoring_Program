@@ -1,5 +1,5 @@
 import { Group } from '../../../models';
-import { processResults } from '../../../utils';
+import { processResults } from '../../../middlewares';
 
 const ELEMENTS_ON_PAGE = 10;
 const PAGE_NUMBER = 1;

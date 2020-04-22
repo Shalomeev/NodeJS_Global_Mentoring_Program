@@ -3,6 +3,6 @@ export const processResults = func => async (req, res, next) => {
     const result = await func(req, res, next);
     res.send(result);
   } catch (e) {
-        next(e); // eslint-disable-line
+    next(e); // eslint-disable-line
   }
 };

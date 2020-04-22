@@ -1,5 +1,5 @@
 import { User } from '../../../models';
-import { processResults } from '../../../utils';
+import { processResults } from '../../../middlewares';
 
 const userUpdate = async (req) => {
   const { id } = req.params;
